@@ -1,10 +1,10 @@
 
 interface ButtonProps{
     buttonText: string,
-    variant: string
+    variant: string,
+    // OnClickHandler: ()=>void
     
 }
-
 
 const Button = ({buttonText, variant}: ButtonProps)=>{
 
@@ -16,6 +16,8 @@ const Button = ({buttonText, variant}: ButtonProps)=>{
                 return 'bg-pink-700 text-white border border-green-500'
             case "newBtn":
                     return 'bg-pink-700  text-white p-2 w-45 '
+            case "login":
+                return   'bg-pink-700 text-white border border-green-500 p-2 w-30'   
             default:
                 return'bg-pink-700  text-white p-2 w-85 rounded-sm'    
         }

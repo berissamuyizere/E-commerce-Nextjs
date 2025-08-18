@@ -3,7 +3,7 @@ import { FcGoogle } from "react-icons/fc";
 import Button from "../sharedComponent/Button";
 
 
-export default function Signup() {
+ const Signup= ()=> {
     return (
             <div className="min-h-screen grid grid-cols-1 md:grid-cols-2">
                 <div className="bg-gray-100 flex items-center justify-center">
@@ -50,7 +50,6 @@ export default function Signup() {
                     </p>
                 </div>
             </div>
-       
     );
 }
-
+export default Signup;
