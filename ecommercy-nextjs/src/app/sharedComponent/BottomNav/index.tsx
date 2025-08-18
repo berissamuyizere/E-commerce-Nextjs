@@ -54,10 +54,33 @@ const Footer = () => {
           <h2 className="text-lg font-bold mb-4">Download App</h2>
           <p className="text-gray-400 text-sm mb-3">Save $3 with App New User Only</p>
           <div className="flex items-center gap-3">
-            <Image src="/images/codeqr.svg" alt="QR Code" width={80} height={80} className="bg-white"/>
-            <div className="flex flex-col gap-2">
-              <Image src="/googleplay.png" alt="Google Play" width={120} height={40} />
-              <Image src="/appstore.png" alt="App Store" width={120} height={40} />
+            <Image src="/images/codeqr.svg" alt="QR Code" width={80} height={80} className="bg-white" />
+            <div className="w-40 h-12 mb-7">
+              <div className=" border rounded flex gap-2 p-0.2">
+                <Image
+                  src={'/google-removebg-preview.png'}
+                  alt="Play Store"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  className="inline-block w-7 h-7 my-2" />
+                <div >
+                  <span className="text-[7px] ">GET IT ON</span>
+                  <p className="text-[10px]"> Google Play</p>
+                </div>
+              </div>
+              <div className="flex gap-2 border rounded mt-3 p-0.2">
+                <Image
+                  src={'/images/apple.jpg'}
+                  alt="Play Store"
+                  width={0}
+                  height={0}
+                  className="inline-block w-7 h-7 my-2"/>
+                <div >
+                  <span className="text-[10px]">DOWNLOAD ON THE</span>
+                  <p className="text-[15px]"> App Store</p>
+                </div>
+              </div>
             </div>
           </div>
           <div className="flex gap-4 mt-4 text-gray-400">

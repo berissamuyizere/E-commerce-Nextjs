@@ -1,8 +1,7 @@
 import Image from "next/image";
 import { FcGoogle } from "react-icons/fc";
 import Button from "../sharedComponent/Button";
-import TopNavigation from "../sharedComponent/Nav";
-import Footer from "../sharedComponent/BottomNav";
+
 
 export default function Signup() {
     return (
