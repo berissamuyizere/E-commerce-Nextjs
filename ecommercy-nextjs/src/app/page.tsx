@@ -37,7 +37,7 @@ const Home = () => {
                         ))}
                     </ul>
                 </aside>
-                <div className="h-100  w-0.5 bg-gray-500 mr-10 " ></div>
+                <div className="h-100  w-0.5 bg-gray-300 mr-10 mt-[-32px] " ></div>
                 <section className="w-full md:w-3/4">
                     <div className="bg-black rounded-xl ">
                         <div className="bg-black rounded-xl flex flex-col md:flex-row items-center justify-between px-8 py-10 relative">
