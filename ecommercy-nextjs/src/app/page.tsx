@@ -4,7 +4,6 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import { MdOutlineRemoveRedEye, MdOutlineStar } from "react-icons/md";
 import { FaMobileAlt, FaDesktop, FaCamera, FaHeadphones, FaGamepad } from "react-icons/fa";
-import { MdArrowUpward } from "react-icons/md"
 
 const Home = () => {
     const categories = [
@@ -18,7 +17,7 @@ const Home = () => {
     return (
         <div className="flex flex-col items-center min-h-screen bg-gray-50">
             <div className="container mx-auto flex flex-col md:flex-row  py-8 px-4">
-                <aside className=" md:w-1/4 ">
+                <aside className=" md:w-1/4">
                     <ul className="space-y-4 text-lg mt-3 ml-4">
                         {[
                             "Woman's Fashion",
@@ -37,7 +36,6 @@ const Home = () => {
                         ))}
                     </ul>
                 </aside>
-                {/* <div className="h-100  w-0.5 bg-gray-300 mr-10 mt-[-32px] " ></div> */}
                 <section className="w-full md:w-3/4">
                     <div className="bg-black rounded-xl ">
                         <div className="bg-black rounded-xl flex flex-col md:flex-row items-center justify-between px-8 py-10 relative">
@@ -225,10 +223,10 @@ const Home = () => {
                 </div>
                 <div className="flex gap-6 overflow-x-auto pb-4">
                     {[
-                        { img: "/images/book.svg", title: "HAVIT HV-G92 Gamepad", price: 120 },
-                        { img: "/images/camera.svg", title: "AK-900 Wired Keyboard", price: 960 },
-                        { img: "/images/ipad.svg", title: "IPS LCD Gaming Monitor", price: 370 },
-                        { img: "/images/vitamin.jpg", title: "S-Series Comfort Chair", price: 375 }
+                        { img: "/images/book.svg", title: "Breed Dry Dog Food", price: 100 },
+                        { img: "/images/camera.svg", title: "CANON EOS DSLR Camera", price: 360 },
+                        { img: "/images/ipad.svg", title: "ASUS FHD Gaming Laptop", price: 700 },
+                        { img: "/images/vitamin.jpg", title: "Curology Product Set", price: 500 }
                     ].map((product, idx) => (
                         <div key={idx} className="bg-white shadow rounded-2xl w-84 p-4 relative flex-shrink-0">
                             <div className="flex justify-center py-6">
