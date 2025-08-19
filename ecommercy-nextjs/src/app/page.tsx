@@ -6,7 +6,7 @@ import { MdOutlineRemoveRedEye, MdOutlineStar } from "react-icons/md";
 import { FaMobileAlt, FaDesktop, FaCamera, FaHeadphones, FaGamepad } from "react-icons/fa";
 import { MdArrowUpward } from "react-icons/md"
 
- const  Home=() =>{
+const Home = () => {
     const categories = [
         { icon: <FaMobileAlt />, label: 'Phones' },
         { icon: <FaDesktop />, label: 'Computers' },
@@ -17,7 +17,7 @@ import { MdArrowUpward } from "react-icons/md"
 
     return (
         <div className="flex flex-col items-center min-h-screen bg-gray-50">
-            <div className="container mx-auto flex flex-col md:flex-row gap-8 py-8 px-4">
+            <div className="container mx-auto flex flex-col md:flex-row  py-8 px-4">
                 <aside className="w-full md:w-1/4">
                     <ul className="space-y-4 text-lg">
                         {[
@@ -32,31 +32,42 @@ import { MdArrowUpward } from "react-icons/md"
                             "Health & Beauty"
                         ].map((item, index) => (
                             <li key={index} className="hover:text-pink-600 cursor-pointer">
-                                {item}
+                                {index < 2 ? `${item} >` : item}
                             </li>
                         ))}
                     </ul>
+                  
                 </aside>
+                   {/* <div className="h-20 w-2 text-black"></div> */}
                 <section className="w-full md:w-3/4">
-                    <div className="bg-black rounded-xl flex flex-col md:flex-row items-center justify-between px-8 py-10 relative">
-                        <div className="text-center md:text-left">
-                            <h2 className="text-white text-xl font-semibold mb-2">iPhone 14 Series</h2>
-                            <h1 className="text-3xl font-bold text-white mb-4">Up to 10% off Voucher</h1>
-                            <button className="bg-white text-black font-semibold px-6 py-2 rounded-md hover:bg-gray-200">
-                                Shop Now &rarr;
-                            </button>
+                    <div className="bg-black rounded-xl ">
+                        <div className="bg-black rounded-xl flex flex-col md:flex-row items-center justify-between px-8 py-10 relative">
+                            <div className="text-center md:text-left">
+                                <h2 className="text-white text-xl font-semibold mb-2">iPhone 14 Series</h2>
+                                <h1 className="text-3xl font-bold text-white mb-4">Up to 10% off Voucher</h1>
+                                <button className="bg-white text-black font-semibold px-6 py-2 rounded-md hover:bg-gray-200">
+                                    Shop Now &rarr;
+                                </button>
+                            </div>
+                            <Image
+                                src="/images/iphone.jpg"
+                                alt="iPhone 14"
+                                width={510}
+                                height={610}
+                                className="object-contain"
+                            />
                         </div>
-                        <Image
-                            src="/images/iphone.jpg"
-                            alt="iPhone 14"
-                            width={500}
-                            height={600}
-                            className="object-contain"
-                        />
+                        <div className="flex justify-center mt-5 space-x-1">
+                            <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
+                            <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
+                            <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                            <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
+                            <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
+                        </div>
                     </div>
                 </section>
             </div>
-            <section className="container mx-auto py-8 px-4">
+            <section className="container m-auto py-8 px-4">
                 <div className="flex items-center space-x-4 mb-6">
                     <div className="w-6 h-10 bg-red-500 rounded-lg"></div>
                     <h1 className="text-red-500 text-2xl font-bold">Todays</h1>
@@ -75,8 +86,8 @@ import { MdArrowUpward } from "react-icons/md"
                     </div>
                     <div className="flex items-center gap-4">
                         <div className="flex gap-4">
-                            <FaArrowLeftLong className="cursor-pointer" />
-                            <FaArrowRightLong className="cursor-pointer" />
+                            <FaArrowLeftLong className="cursor-pointer"/>
+                            <FaArrowRightLong className="cursor-pointer"/>
                         </div>
                     </div>
                 </div>
@@ -85,12 +96,12 @@ import { MdArrowUpward } from "react-icons/md"
                         { img: "/images/gamepad.jpg", title: "HAVIT HV-G92 Gamepad", price: 120, oldPrice: 160, discount: "-40%" },
                         { img: "/images/keyboard.jpeg", title: "AK-900 Wired Keyboard", price: 960, oldPrice: 1480, discount: "-35%" },
                         { img: "/images/tvshop.png", title: "IPS LCD Gaming Monitor", price: 370, oldPrice: 400, discount: "-30%" },
-                        { img: "/images/chairecommerce.jpg", title: "S-Series Comfort Chair", price: 375, oldPrice: 400, discount: "-25%" }
+                        { img: "/images/chairecommerce.jpg", title: "S-Series Comfort Chair", price: 375, oldPrice: 400, discount: "-25%" },
                     ].map((product, idx) => (
-                        <div key={idx} className="bg-white shadow rounded-2xl w-64 p-4 relative flex-shrink-0">
+                        <div key={idx} className="bg-white shadow rounded-2xl w-84 p-4 relative flex-shrink-0">
                             <span className="absolute top-4 left-4 px-2 py-0.5 bg-pink-600 text-xs text-white rounded font-bold">{product.discount}</span>
                             <div className="flex justify-center py-6">
-                                <Image src={product.img} alt={product.title} width={180} height={180} className="object-contain" />
+                                <Image src={product.img} alt={product.title} width={200} height={200} className="object-contain ml-5"/>
                             </div>
                             <div className="font-semibold text-sm">{product.title}</div>
                             <div className="flex items-center gap-2 mt-2">
@@ -111,7 +122,7 @@ import { MdArrowUpward } from "react-icons/md"
                     ))}
                 </div>
                 <div className="text-center mt-6">
-                    <Button buttonText="View All Products" variant="newBtn" />
+                    <Button buttonText="View All Products" variant="newBtn"/>
                 </div>
             </section>
             <section className="container mx-auto py-8 px-4">
@@ -133,7 +144,7 @@ import { MdArrowUpward } from "react-icons/md"
                             role="button"
                             tabIndex={0}
                             aria-pressed={active ? true : false}
-                            className={`cursor-pointer flex flex-col items-center justify-center border rounded-md w-60 h-60 transition-colors focus:outline-none focus:ring-2 focus:ring-pink-600 ${active ? 'bg-pink-600 border-pink-600 text-white' : 'border-gray-300 text-black hover:border-gray-600'}`}
+                            className={`cursor-pointer flex flex-col items-center justify-center border rounded-md w-50 h-50 transition-colors focus:outline-none focus:ring-2 focus:ring-pink-600 ${active ? 'bg-pink-600 border-pink-600 text-white' : 'border-gray-300 text-black hover:border-gray-600'}`}
                         >
                             <div className="text-2xl mb-2">{icon}</div>
                             <span className="text-sm font-medium">{label}</span>
@@ -155,9 +166,9 @@ import { MdArrowUpward } from "react-icons/md"
                         { img: "/images/pinkcoart.png", title: "HAVIT HV-G92 Gamepad", price: 120, oldPrice: 160 },
                         { img: "/images/gucibag.avif", title: "AK-900 Wired Keyboard", price: 960, oldPrice: 1480 },
                         { img: "/images/CDs.jpeg", title: "IPS LCD Gaming Monitor", price: 370, oldPrice: 400 },
-                        { img: "/images/smallshelf.jpg", title: "S-Series Comfort Chair", price: 375, oldPrice: 400 },
+                        { img: "/images/smallshelf.jpg", title: "S-Series Comfort Chair", price: 375, oldPrice: 400 }
                     ].map((product, idx) => (
-                        <div key={idx} className="bg-white shadow rounded-2xl w-64 p-4 relative flex-shrink-0">
+                        <div key={idx} className="bg-white shadow rounded-2xl w-84 p-4 relative flex-shrink-0">
                             <div className="flex justify-center py-6">
                                 <Image src={product.img} alt={product.title} width={180} height={180} className="object-contain" />
                             </div>
@@ -181,7 +192,7 @@ import { MdArrowUpward } from "react-icons/md"
                 </div>
             </section>
             <section className="container mx-auto py-8 px-4">
-                <div className="bg-black text-white p-8 rounded-lg flex flex-col md:flex-row items-center justify-between">
+                <div className="bg-black text-white p-8 rounded-lg flex flex-col md:flex-row items-center justify-center gap-9">
                     <div className="space-y-6 text-center md:text-left max-w-md">
                         <p className="text-green-500 font-semibold">Categories</p>
                         <h1 className="text-4xl font-bold leading-tight">Enhance Your Music Experience</h1>
@@ -197,7 +208,7 @@ import { MdArrowUpward } from "react-icons/md"
                             Buy Now!
                         </button>
                     </div>
-                    <Image src="/images/speaker.jpg" alt="JBL Speaker" width={400} height={400} className="object-contain mt-8 md:mt-0" />
+                    <Image src="/images/newspeaker.svg" alt="JBL Speaker" width={750} height={750} className="object-contain mt-8 md:mt-0" />
                 </div>
             </section>
 
@@ -214,9 +225,9 @@ import { MdArrowUpward } from "react-icons/md"
                         { img: "/images/book.svg", title: "HAVIT HV-G92 Gamepad", price: 120 },
                         { img: "/images/camera.svg", title: "AK-900 Wired Keyboard", price: 960 },
                         { img: "/images/ipad.svg", title: "IPS LCD Gaming Monitor", price: 370 },
-                        { img: "/images/vitamin.jpg", title: "S-Series Comfort Chair", price: 375 },
+                        { img: "/images/vitamin.jpg", title: "S-Series Comfort Chair", price: 375 }
                     ].map((product, idx) => (
-                        <div key={idx} className="bg-white shadow rounded-2xl w-64 p-4 relative flex-shrink-0">
+                        <div key={idx} className="bg-white shadow rounded-2xl w-84 p-4 relative flex-shrink-0">
                             <div className="flex justify-center py-6">
                                 <Image src={product.img} alt={product.title} width={180} height={180} className="object-contain" />
                             </div>
@@ -248,13 +259,13 @@ import { MdArrowUpward } from "react-icons/md"
                         { img: "/images/coat.svg", title: "Quilted Satin Jacket", price: 375, discount: "-25%" },
 
                     ].map((product, idx) => (
-                        <div key={idx} className="bg-white shadow rounded-2xl w-64 p-4 relative flex-shrink-0">
+                        <div key={idx} className="bg-white shadow rounded-2xl w-84 p-4 relative flex-shrink-0">
                             <span className="absolute top-4 left-4 px-2 py-0.5 bg-green-600 text-xs text-white rounded font-bold">{product.discount}</span>
-                            <div className="flex justify-center py-6">
+                            <div className="flex justify-center ">
                                 <Image src={product.img} alt={product.title} width={150} height={150} className="object-contain" />
                             </div>
                             <div className="font-semibold text-sm">{product.title}</div>
-                           <div className="flex">
+                            <div className="flex">
                                 <div className="flex items-center gap-2 mt-2">
                                     <span className="text-pink-700 font-bold text-lg">${product.price}</span>
                                 </div>
@@ -272,17 +283,14 @@ import { MdArrowUpward } from "react-icons/md"
                     <Button buttonText="View All Products" variant="newBtn" />
                 </div>
             </section>
-          
-            <div className=" ml-0">
-                <div className="flex items-center space-x-4 mb-6">
+            <section className="container mx-auto py-8 px-4">
+                 <div className="flex  space-x-4 mb-6">
                     <div className="w-6 h-10 bg-red-500 rounded-lg"></div>
                     <h1 className="text-red-500 text-2xl font-bold">Featured</h1>
                 </div>
-                <h2 className="text-2xl font-bold">Explore Our Products</h2>
-            </div>
-
-            <section className="container mx-auto py-8 px-4">
-
+                <div className="flex justify-between items-center mb-6">
+                    <h2 className="text-2xl font-bold">New Arrival</h2>
+                </div>    
                 <div className="grid md:grid-cols-2 gap-6">
                     <div className="relative rounded-lg overflow-hidden shadow h-200">
                         <Image src="/images/speakers.webp" alt="PlayStation 5" width={400} height={200} className="w-full h-full object-cover" />
