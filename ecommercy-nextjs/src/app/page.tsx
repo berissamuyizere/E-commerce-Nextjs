@@ -59,7 +59,7 @@ import { MdArrowUpward } from "react-icons/md"
             <section className="container mx-auto py-8 px-4">
                 <div className="flex items-center space-x-4 mb-6">
                     <div className="w-6 h-10 bg-red-500 rounded-lg"></div>
-                    <h1 className="text-red-500 text-2xl font-bold">Today's</h1>
+                    <h1 className="text-red-500 text-2xl font-bold">Todays</h1>
                 </div>
                 <div className="flex flex-col md:flex-row justify-between items-center mb-6">
                     <div className="flex ">
@@ -86,7 +86,6 @@ import { MdArrowUpward } from "react-icons/md"
                         { img: "/images/keyboard.jpeg", title: "AK-900 Wired Keyboard", price: 960, oldPrice: 1480, discount: "-35%" },
                         { img: "/images/tvshop.png", title: "IPS LCD Gaming Monitor", price: 370, oldPrice: 400, discount: "-30%" },
                         { img: "/images/chairecommerce.jpg", title: "S-Series Comfort Chair", price: 375, oldPrice: 400, discount: "-25%" }
-                        // { img: "/images/chairecommerce.jpg", title: "S-Series Comfort Chair", price: 375, oldPrice: 400, discount: "-25%" }
                     ].map((product, idx) => (
                         <div key={idx} className="bg-white shadow rounded-2xl w-64 p-4 relative flex-shrink-0">
                             <span className="absolute top-4 left-4 px-2 py-0.5 bg-pink-600 text-xs text-white rounded font-bold">{product.discount}</span>
@@ -157,7 +156,6 @@ import { MdArrowUpward } from "react-icons/md"
                         { img: "/images/gucibag.avif", title: "AK-900 Wired Keyboard", price: 960, oldPrice: 1480 },
                         { img: "/images/CDs.jpeg", title: "IPS LCD Gaming Monitor", price: 370, oldPrice: 400 },
                         { img: "/images/smallshelf.jpg", title: "S-Series Comfort Chair", price: 375, oldPrice: 400 },
-                        // { img: "/images/smallshelf.jpg", title: "S-Series Comfort Chair", price: 375, oldPrice: 400 }
                     ].map((product, idx) => (
                         <div key={idx} className="bg-white shadow rounded-2xl w-64 p-4 relative flex-shrink-0">
                             <div className="flex justify-center py-6">
@@ -274,7 +272,7 @@ import { MdArrowUpward } from "react-icons/md"
                     <Button buttonText="View All Products" variant="newBtn" />
                 </div>
             </section>
-            {/* Featured Products Section */}
+          
             <div className=" ml-0">
                 <div className="flex items-center space-x-4 mb-6">
                     <div className="w-6 h-10 bg-red-500 rounded-lg"></div>

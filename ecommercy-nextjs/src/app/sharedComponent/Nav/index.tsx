@@ -4,7 +4,6 @@ import { FaChevronDown } from "react-icons/fa6";
 import { IoSearchOutline } from "react-icons/io5";
 import { FiHeart, FiShoppingCart } from "react-icons/fi"; 
 
-
 const TopNavigation = () => {
   return (
     <header className="w-full">
