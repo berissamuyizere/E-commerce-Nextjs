@@ -8,7 +8,7 @@ const TopNavigation = () => {
   return (
     <header className="w-full">
       <div className="bg-black text-white flex justify-between items-center px-26 py-6 text-md">
-        <p>
+        <p className="ml-96">
           Summer Sale For All Swim Suits And Free Express Delivery -{" "}
           <span className="font-semibold text-amber-300">OFF 50%!</span>{" "}
           <Link href="#" className="underline ml-2">
@@ -17,7 +17,7 @@ const TopNavigation = () => {
         </p>
         <div className="flex items-center gap-2 cursor-pointer">
           <span>English</span>
-          <FaChevronDown size={12} />
+          <FaChevronDown size={12}/>
         </div>
       </div>
       <div className="flex justify-between items-center px-10 py-4">

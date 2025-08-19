@@ -58,7 +58,7 @@ const Footer = () => {
             <div className="w-40 h-12 mb-7">
               <div className=" border rounded flex gap-2 p-0.2">
                 <Image
-                  src={'/google-removebg-preview.png'}
+                  src={'/images/apple.svg'}
                   alt="Play Store"
                   width={0}
                   height={0}
@@ -71,7 +71,7 @@ const Footer = () => {
               </div>
               <div className="flex gap-2 border rounded mt-3 p-0.2">
                 <Image
-                  src={'/images/apple.jpg'}
+                  src={'/images/playstore.png'}
                   alt="Play Store"
                   width={0}
                   height={0}

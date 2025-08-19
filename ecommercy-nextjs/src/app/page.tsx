@@ -37,14 +37,18 @@ const Home = () => {
                         ))}
                     </ul>
                 </aside>
-                <div className="h-100  w-0.5 bg-gray-300 mr-10 mt-[-32px] " ></div>
+                {/* <div className="h-100  w-0.5 bg-gray-300 mr-10 mt-[-32px] " ></div> */}
                 <section className="w-full md:w-3/4">
                     <div className="bg-black rounded-xl ">
                         <div className="bg-black rounded-xl flex flex-col md:flex-row items-center justify-between px-8 py-10 relative">
                             <div className="text-center md:text-left">
-                                <h2 className="text-white text-xl font-semibold mb-2">iPhone 14 Series</h2>
-                                <h1 className="text-3xl font-bold text-white mb-4">Up to 10% off Voucher</h1>
-                                <button className="bg-white text-black font-semibold px-6 py-2 rounded-md hover:bg-gray-200">
+                                <div className="flex gap-3">
+                                    <Image src={"/images/apple.svg"} alt="Apple image" width={40} height={20} />
+                                    <h2 className="text-white text-md font-semibold mt-4">iPhone 14 Series</h2>
+                                </div>
+
+                                <h1 className="text-5xl font-bold text-white mb-4 w-70">Up to 10% off Voucher</h1>
+                                <button className=" text-white font-semibold px-1 py-2  hover:bg-gray-200  border-b-2">
                                     Shop Now &rarr;
                                 </button>
                             </div>
@@ -56,10 +60,10 @@ const Home = () => {
                                 className="object-contain"
                             />
                         </div>
-                        <div className="flex justify-center mt-5 space-x-1">
+                        <div className="flex justify-center space-x-1">
                             <span className="w-3 h-3 bg-gray-400 rounded-full"></span>
                             <span className="w-3 h-3 bg-gray-400 rounded-full"></span>
-                            <span className="w-3 h-3 bg-red-500 rounded-full"></span>
+                            <span className="w-3 h-3 bg-red-500 rounded-full border-2 border-white"></span>
                             <span className="w-3 h-3 bg-gray-400 rounded-full"></span>
                             <span className="w-3 h-3 bg-gray-400 rounded-full"></span>
                         </div>
@@ -72,13 +76,13 @@ const Home = () => {
                     <h1 className="text-red-500 text-md font-bold">Todays</h1>
                 </div>
                 <div className="flex flex-col md:flex-row justify-between items-center mb-6">
-                    <div className="flex ">
-                        <h2 className="text-2xl font-bold">Flash Sales</h2>
+                    <div className="flex gap-8">
+                        <h2 className="text-3xl font-bold">Flash Sales</h2>
                         <div className="flex gap-2 ml-14">
                             {['03:Days', '23:Hours', '19:Minutes', '56:Seconds'].map((time, idx) => (
                                 <div key={idx} className="flex flex-col items-center">
-                                    <span className="text-pink-600 text-lg font-bold">{time.split(':')[0]}</span>
                                     <span className="text-xs text-gray-400">{time.split(':')[1]}</span>
+                                    <span className="text-black text-2xl font-bold">{time.split(':')[0]}:</span>
                                 </div>
                             ))}
                         </div>
@@ -291,8 +295,8 @@ const Home = () => {
                     <h2 className="text-2xl font-bold">New Arrival</h2>
                 </div>
                 <div className="grid md:grid-cols-2 gap-6">
-                    <div className="relative rounded-lg overflow-hidden shadow h-200">
-                        <Image src="/images/speakers.webp" alt="PlayStation 5" width={400} height={200} className="w-full h-full object-cover" />
+                    <div className="relative rounded-lg overflow-hidden shadow h-200 bg-black">
+                        <Image src="/images/speakernew.svg" alt="PlayStation 5" width={400} height={200} className="w-full h-full object-cover" />
                         <div className="absolute bottom-5 left-5 text-white">
                             <h2 className="text-2xl font-semibold">PlayStation 5</h2>
                             <p className="mb-2">Black and White version of the PS5 coming out on sale</p>
@@ -301,23 +305,23 @@ const Home = () => {
                     </div>
                     <div className="grid grid-cols-2 grid-rows-2 gap-6 h-200">
                         <div className="relative rounded-lg overflow-hidden shadow col-span-2">
-                            <Image src="/images/prettywoman.avif" alt="Woman Collection" width={200} height={50} className="w-full h-full object-cover" />
+                            <Image src="/images/prettywomannew.svg" alt="Woman Collection" width={200} height={50} className="w-full h-full object-cover" />
                             <div className="absolute bottom-5 left-5 text-white">
                                 <h2 className="text-xl font-semibold">Woman</h2>
                                 <p className="mb-2">Featured woman collections that give you another vibe</p>
                                 <button className="bg-white text-black px-4 py-2 rounded hover:bg-gray-200">Shop Now</button>
                             </div>
                         </div>
-                        <div className="relative rounded-lg overflow-hidden shadow">
-                            <Image src="/images/cylindricalspeakers.avif" alt="Speakers" width={100} height={50} className="w-full h-full object-cover" />
+                        <div className="relative rounded-lg overflow-hidden shadow bg-black">
+                            <Image src="/images/cylinders.svg" alt="Speakers" width={100} height={50} className="w-full h-full object-cover" />
                             <div className="absolute bottom-5 left-5 text-white">
                                 <h2 className="text-lg font-semibold">Speakers</h2>
                                 <p className="mb-2">Amazon wireless speakers</p>
                                 <button className="bg-white text-black px-3 py-1 rounded text-xs hover:bg-gray-200">Shop Now</button>
                             </div>
                         </div>
-                        <div className="relative rounded-lg overflow-hidden shadow">
-                            <Image src="/images/perfume.webp" alt="Perfume" width={100} height={50} className="w-full h-full object-cover" />
+                        <div className="relative rounded-lg overflow-hidden shadow bg-black">
+                            <Image src="/images/newperfume.svg" alt="Perfume" width={100} height={50} className="w-full h-full object-cover" />
                             <div className="absolute bottom-5 left-5 text-white">
                                 <h2 className="text-lg font-semibold">Perfume</h2>
                                 <p className="mb-2">GUCCI INTENSE OUD EDP</p>
@@ -327,7 +331,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className="flex gap-60 mx-45 my-20">
+            <section className="flex justify-center gap-76 mx-45 my-20">
                 <div className="justify-center items-center">
                     <Image src="/images/Services.svg" alt="servives" width={100} height={50} />
                     <h2 className="font-bold">FREE AND FAST DELIVERY</h2>
@@ -343,8 +347,8 @@ const Home = () => {
                     <h2 className="font-bold">MONEY BACK GUARANTEE</h2>
                     <p className="text-xs">We reurn money within 30 days</p>
                 </div>
-                <MdArrowUpward className=" ml-10 text-3xl mt-30" />
             </section>
+            {/* <MdArrowUpward className=" ml-350 text-3xl mt-10" /> */}
         </div>
     );
 }
