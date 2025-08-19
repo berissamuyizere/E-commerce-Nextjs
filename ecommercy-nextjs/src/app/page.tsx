@@ -18,8 +18,8 @@ const Home = () => {
     return (
         <div className="flex flex-col items-center min-h-screen bg-gray-50">
             <div className="container mx-auto flex flex-col md:flex-row  py-8 px-4">
-                <aside className="w-full md:w-1/4">
-                    <ul className="space-y-4 text-lg">
+                <aside className=" md:w-1/4 ">
+                    <ul className="space-y-4 text-lg mt-3 ml-4">
                         {[
                             "Woman's Fashion",
                             "Men's Fashion",
@@ -36,9 +36,8 @@ const Home = () => {
                             </li>
                         ))}
                     </ul>
-                  
                 </aside>
-                   {/* <div className="h-20 w-2 text-black"></div> */}
+                <div className="h-100  w-0.5 bg-gray-500 mr-10 " ></div>
                 <section className="w-full md:w-3/4">
                     <div className="bg-black rounded-xl ">
                         <div className="bg-black rounded-xl flex flex-col md:flex-row items-center justify-between px-8 py-10 relative">
@@ -58,19 +57,19 @@ const Home = () => {
                             />
                         </div>
                         <div className="flex justify-center mt-5 space-x-1">
-                            <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
-                            <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
-                            <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-                            <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
-                            <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
+                            <span className="w-3 h-3 bg-gray-400 rounded-full"></span>
+                            <span className="w-3 h-3 bg-gray-400 rounded-full"></span>
+                            <span className="w-3 h-3 bg-red-500 rounded-full"></span>
+                            <span className="w-3 h-3 bg-gray-400 rounded-full"></span>
+                            <span className="w-3 h-3 bg-gray-400 rounded-full"></span>
                         </div>
                     </div>
                 </section>
             </div>
             <section className="container m-auto py-8 px-4">
                 <div className="flex items-center space-x-4 mb-6">
-                    <div className="w-6 h-10 bg-red-500 rounded-lg"></div>
-                    <h1 className="text-red-500 text-2xl font-bold">Todays</h1>
+                    <div className="w-4 h-8 bg-red-500 rounded-md"></div>
+                    <h1 className="text-red-500 text-md font-bold">Todays</h1>
                 </div>
                 <div className="flex flex-col md:flex-row justify-between items-center mb-6">
                     <div className="flex ">
@@ -86,8 +85,8 @@ const Home = () => {
                     </div>
                     <div className="flex items-center gap-4">
                         <div className="flex gap-4">
-                            <FaArrowLeftLong className="cursor-pointer"/>
-                            <FaArrowRightLong className="cursor-pointer"/>
+                            <FaArrowLeftLong className="cursor-pointer" />
+                            <FaArrowRightLong className="cursor-pointer" />
                         </div>
                     </div>
                 </div>
@@ -101,7 +100,7 @@ const Home = () => {
                         <div key={idx} className="bg-white shadow rounded-2xl w-84 p-4 relative flex-shrink-0">
                             <span className="absolute top-4 left-4 px-2 py-0.5 bg-pink-600 text-xs text-white rounded font-bold">{product.discount}</span>
                             <div className="flex justify-center py-6">
-                                <Image src={product.img} alt={product.title} width={200} height={200} className="object-contain ml-5"/>
+                                <Image src={product.img} alt={product.title} width={200} height={200} className="object-contain ml-5" />
                             </div>
                             <div className="font-semibold text-sm">{product.title}</div>
                             <div className="flex items-center gap-2 mt-2">
@@ -122,13 +121,13 @@ const Home = () => {
                     ))}
                 </div>
                 <div className="text-center mt-6">
-                    <Button buttonText="View All Products" variant="newBtn"/>
+                    <Button buttonText="View All Products" variant="newBtn" />
                 </div>
             </section>
             <section className="container mx-auto py-8 px-4">
                 <div className="flex items-center space-x-4 mb-6">
-                    <div className="w-6 h-10 bg-red-500 rounded-lg"></div>
-                    <h1 className="text-red-500 text-2xl font-bold">Categories</h1>
+                    <div className="w-4 h-8 bg-red-500 rounded-md"></div>
+                    <h1 className="text-red-500 text-md font-bold">Categories</h1>
                 </div>
                 <div className="flex justify-between items-center mb-6">
                     <h2 className="text-2xl font-bold">Browse By Category</h2>
@@ -137,14 +136,14 @@ const Home = () => {
                         <FaArrowRightLong className="cursor-pointer" />
                     </div>
                 </div>
-                <div className="flex justify-center gap-4">
+                <div className="flex justify-center gap-17">
                     {categories.map(({ icon, label, active }, index) => (
                         <div
                             key={index}
                             role="button"
                             tabIndex={0}
                             aria-pressed={active ? true : false}
-                            className={`cursor-pointer flex flex-col items-center justify-center border rounded-md w-50 h-50 transition-colors focus:outline-none focus:ring-2 focus:ring-pink-600 ${active ? 'bg-pink-600 border-pink-600 text-white' : 'border-gray-300 text-black hover:border-gray-600'}`}
+                            className={`cursor-pointer flex flex-col items-center justify-center border rounded-md w-40 h-40 transition-colors focus:outline-none focus:ring-2 focus:ring-pink-600 ${active ? 'bg-pink-600 border-pink-600 text-white' : 'border-gray-300 text-black hover:border-gray-600'}`}
                         >
                             <div className="text-2xl mb-2">{icon}</div>
                             <span className="text-sm font-medium">{label}</span>
@@ -154,8 +153,8 @@ const Home = () => {
             </section>
             <section className="container mx-auto py-8 px-4">
                 <div className="flex items-center space-x-4 mb-6">
-                    <div className="w-6 h-10 bg-red-500 rounded-lg"></div>
-                    <h1 className="text-red-500 text-2xl font-bold">This Month</h1>
+                    <div className="w-4 h-8 bg-red-500 rounded-md"></div>
+                    <h1 className="text-red-500 text-md font-bold">This Month</h1>
                 </div>
                 <div className="flex justify-between items-center mb-6">
                     <h2 className="text-2xl font-bold">Best Selling Products</h2>
@@ -214,8 +213,8 @@ const Home = () => {
 
             <section className="container mx-auto py-8 px-4">
                 <div className="flex  space-x-4 mb-6">
-                    <div className="w-6 h-10 bg-red-500 rounded-lg"></div>
-                    <h1 className="text-red-500 text-2xl font-bold">Our Products</h1>
+                    <div className="w-4 h-8 bg-red-500 rounded-md"></div>
+                    <h1 className="text-red-500 text-md font-bold">Our Products</h1>
                 </div>
                 <div className="flex justify-between items-center mb-6">
                     <h2 className="text-2xl font-bold">Explore Our Products</h2>
@@ -284,13 +283,13 @@ const Home = () => {
                 </div>
             </section>
             <section className="container mx-auto py-8 px-4">
-                 <div className="flex  space-x-4 mb-6">
-                    <div className="w-6 h-10 bg-red-500 rounded-lg"></div>
-                    <h1 className="text-red-500 text-2xl font-bold">Featured</h1>
+                <div className="flex  space-x-4 mb-6">
+                    <div className="w-4 h-8 bg-red-500 rounded-md"></div>
+                    <h1 className="text-red-500 text-md font-bold">Featured</h1>
                 </div>
                 <div className="flex justify-between items-center mb-6">
                     <h2 className="text-2xl font-bold">New Arrival</h2>
-                </div>    
+                </div>
                 <div className="grid md:grid-cols-2 gap-6">
                     <div className="relative rounded-lg overflow-hidden shadow h-200">
                         <Image src="/images/speakers.webp" alt="PlayStation 5" width={400} height={200} className="w-full h-full object-cover" />
