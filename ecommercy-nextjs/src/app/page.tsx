@@ -4,6 +4,7 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import { MdOutlineRemoveRedEye, MdOutlineStar } from "react-icons/md";
 import { FaMobileAlt, FaDesktop, FaCamera, FaHeadphones, FaGamepad } from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa"
 
 const Home = () => {
     const categories = [
@@ -17,7 +18,7 @@ const Home = () => {
     return (
         <div className="flex flex-col items-center min-h-screen bg-gray-50">
             <div className="container mx-auto flex flex-col md:flex-row  py-8 px-4">
-                <aside className=" md:w-1/4">
+                <aside className="md:w-1/4">
                     <ul className="space-y-4 text-lg mt-3 ml-4">
                         {[
                             "Woman's Fashion",
@@ -30,8 +31,9 @@ const Home = () => {
                             "Groceries & Pets",
                             "Health & Beauty"
                         ].map((item, index) => (
-                            <li key={index} className="hover:text-pink-600 cursor-pointer">
-                                {index < 2 ? `${item} >` : item}
+                            <li key={index} className="hover:text-pink-600 cursor-pointer flex items-center">
+                                {item}
+                                {index < 2 && <FaChevronRight className="ml-8 text-md" />}
                             </li>
                         ))}
                     </ul>
@@ -232,6 +234,9 @@ const Home = () => {
                             <div className="flex justify-center py-6">
                                 <Image src={product.img} alt={product.title} width={180} height={180} className="object-contain" />
                             </div>
+                             {idx === 1 && (
+                                <Button buttonText="Add To Cart" variant="primary"/>
+                            )}
                             <div className="font-semibold text-sm">{product.title}</div>
                             <div className="flex">
                                 <div className="flex items-center gap-2 mt-2">
@@ -244,7 +249,7 @@ const Home = () => {
                                     <span className="text-gray-500 ml-2">(88)</span>
                                 </div>
                             </div>
-
+                           
                             <div className="absolute top-4 right-4 flex flex-col gap-2">
                                 <AiOutlineHeart className="text-lg hover:text-pink-600 cursor-pointer" />
                                 <MdOutlineRemoveRedEye className="text-lg hover:text-pink-600 cursor-pointer" />
@@ -346,7 +351,6 @@ const Home = () => {
                     <p className="text-xs">We reurn money within 30 days</p>
                 </div>
             </section>
-            {/* <MdArrowUpward className=" ml-350 text-3xl mt-10" /> */}
         </div>
     );
 }
